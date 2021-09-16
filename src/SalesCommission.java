@@ -18,10 +18,33 @@ Total Earnings: $1184.38
 
  */
 
+/*
+ PLAN-
+ Put methods
+ Hourly rate , hours worked, sales commission percent, total sales , total earnings
+Do math
+output
+
+ */
+
+
+import javax.swing.*;
+
 public class SalesCommission {
 
     public static void main(String[] args) {
 
     }
 
+    double hoursworked = Integer.parseInt(JOptionPane.showInputDialog("how long have you worked ? "));
+    double
+
+
 }
+
+
+
+
+
+
+
