@@ -20,8 +20,9 @@ Total Earnings: $1184.38
 
 /*
  PLAN-
- Put methods
- Hourly rate , hours worked, sales commission percent, total sales , total earnings
+what do we need from the user
+Put methods
+Hourly rate , hours worked, sales commission percent, total sales , total earnings
 Do math
 output
 
@@ -29,16 +30,54 @@ output
 
 
 import javax.swing.*;
+import java.text.DecimalFormat;
 
 public class SalesCommission {
 
     public static void main(String[] args) {
+       double hourWorked = Input("How many hours have you worked?");
+       double rate = Input("What is your hourly rate?");
+       double sales = Input("whats your total sales ? ");
+       double comPercent = Input("what is your Commission percent ?");
+
+       double hourlyPay = hourlyPay(hourWorked, rate);
+               double commission = commission(sales, comPercent);
+                       double totalPay = (hourlyPay , commission)
+
+        ouput(getTotalPay);
+
+    }
+    public static double Input(String prompt) {
+
+        return Double.parseDouble(JOptionPane.showInputDialog(prompt));
 
     }
 
-    double hoursworked = Integer.parseInt(JOptionPane.showInputDialog("how long have you worked ? "));
-    double
+    public static double hourlyPay(double hourWorked, double rate){
+        double hourlyRate = rate * hourlyWorked;
+        return hourlyPay;
 
+    }
+
+    public static double commission(double sales, double comPercent){
+        return sales * comPercent/100.0;
+
+
+    }
+
+    public static double totalPay(double commission , double hourlyPay){
+       double  hourlyPay + commission;
+
+    }
+
+    public static void output(double getsale){
+        DecimalFormat round = new DecimalFormat("$##,##.00");
+        JOptionPane.showMessageDialog(null, "total Earning : " + round.format(getsale));
+
+
+
+
+    }
 
 }
 
